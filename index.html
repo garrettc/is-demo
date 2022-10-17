@@ -3,33 +3,62 @@
 <head>
 
     <title>IS Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" type="text/css" href="/css/neat.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" src="/js/alpine.min.js" defer></script>
+    <script type="text/javascript" src="/js/hyperscript.min.js" defer></script> -->
+    <script type="text/javascript" src="/js/htmx.min.js"></script>
+    <script type="text/javascript" src="/js/client-side-templates.js"></script>
+    <script type="text/javascript" src="/js/mustache.js"></script>
+    <!-- <script>
+        // Get Alpine to use a valid html custom attribute prefix
+        document.addEventListener("alpine:init", () => Alpine.prefix("data-x-"));
+    </script> -->
 
 </head>
 
 <body>
     <header>
-        <h1>Header</h1>
+        <h1>IS Demo</h1>
     </header>
 
     <main>
-        <p>paragraph text.</p>
+        <div hx-ext="client-side-templates">
+            <button type="button"
+                hx-get="https://api.ooni.io/api/_/countries"
+                hx-trigger="load, click"
+                hx-swap="innerHTML"
+                hx-target="#country-list"
+                mustache-template="countries">
+                Reload data
+            </button>
+
+            <script id="countries" type="mustache">
+                <caption>
+                A list of countries and a random number
+                </caption>
+                <thead><tr><th scope="col">Country</th><th scope="col">Count</th></tr></thead>
+                <tbody>
+                {{#countries}}
+                  <tr>
+                    <td>{{name}}</td><td>{{count}}</td>
+                  </tr>
+                {{/countries}}
+                </tbody>
+                <tfoot><tr><th scope="col">Country</th><th scope="col">Count</th></tr></tfoot>
+              </script>
+
+              <table id="country-list"></table>
+          </div>
     </main>
 
 
 
     <footer>
-        <script type="text/javascript" src="/js/alpine.min.js" defer></script>
-        <script type="text/javascript" src="/js/hyperscript.min.js" defer></script>
-        <script type="text/javascript" src="/js/htmx.min.js" defer></script>
-        <script>
-            // Get Alpine to use a valid html custom attribute prefix
-            document.addEventListener("alpine:init", () => Alpine.prefix("data-x-"));
-        </script>
+
     </footer>
 </body>
 

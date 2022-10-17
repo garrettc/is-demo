@@ -1,0 +1,46 @@
+:root {
+
+}
+
+table {
+    margin: 4rem 0 4rem 0;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+  padding: 20px;
+  font-style: italic;
+}
+
+thead, tfoot {
+    background-color: var(--dark);
+}
+
+th {
+    padding: 5px 10px 5px 10px;
+    color: var(--light);
+    text-align: left;
+    font-weight: normal;
+}
+
+td {
+    padding: 5px 10px 5px 10px;
+    text-align: left;
+}
+
+/* tbody {
+    display: block;
+    overflow-y: auto;
+    width: 100%;
+    height: calc(100vh - 20rem);
+} */
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f3f3f3;
+}

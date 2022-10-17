@@ -30,7 +30,7 @@ $ pip install -r requirements/requirements-dev.txt
 
 ### Pre-commit hooks
 
-This repository uses the [pre-commit](https://pre-commit.com/) framework to perform certain sanity checks during development. These include code formatting with [Black](https://black.readthedocs.io/en/stable/index.html) and [DjHTML](https://github.com/rtts/djhtml), import sorting with [isort](https://pycqa.github.io/isort/index.html), and detecting any private keys you may have accidentally added to the repository. For a full list see the file `<install-directory>/.pre-commit-config.yaml`.
+This repository uses the [pre-commit](https://pre-commit.com/) framework to perform certain sanity checks during development. This includes detecting any private keys you may have accidentally added to the repository. For a full list see the file `<install-directory>/.pre-commit-config.yaml`.
 
 Run pre-commit install to set up the git hook scripts
 
@@ -40,7 +40,17 @@ $ pre-commit install
 
 Now pre-commit will run automatically on git commit.
 
-### Configuration
+## Running
 
+To run the app with a basic HTTP server:
+
+```
+$ python -m http.server
+```
 
 ## Todo
+
+[] Table sorting
+[] Write some tests
+[] Add Flask or Django app to enable caching of results and more interactive filters
+[] Bundle javascript to reduce HTTP requests

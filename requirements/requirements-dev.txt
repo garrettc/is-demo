@@ -4,8 +4,3 @@ black
 djhtml
 flake8
 isort
-Werkzeug
-pytest
-pytest-django
-coverage
-django-extensions
