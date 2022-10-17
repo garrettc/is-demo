@@ -48,10 +48,10 @@ To run the app with a basic HTTP server:
 $ python -m http.server
 ```
 
-## Todo
+## Next Steps
 
-- [x] Retrieve data and style
-- [x] Table sorting
-- [] Write some tests
-- [] Add Flask or Django app to enable caching of results and more interactive filters
-- [] Bundle javascript to reduce HTTP requests
+Things to improve this demo:
+
+- [ ] Write some tests
+- [ ] Add Flask or Django app to enable client resiliance, result caching, and more interactive filters
+- [ ] Bundle javascript to reduce HTTP requests
