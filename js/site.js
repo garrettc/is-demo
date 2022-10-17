@@ -11,3 +11,11 @@ if (navigator.serviceWorker) {
             console.error('Failure!', error);
         });
 }
+
+// Sort table by country name by default
+window.addEventListener('load', function () {
+    const el = document.getElementById('country')
+    if (el) {
+      el.click()
+    }
+  })

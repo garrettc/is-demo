@@ -23,6 +23,34 @@ th {
     color: var(--light);
     text-align: left;
     font-weight: normal;
+    cursor: pointer;
+}
+
+th:hover {
+    color: #ffcd00;
+}
+
+th::after {
+    font-size: inherit;
+    content: ' \02B0D'
+}
+
+th.dir-d {
+    color: #ffcd00;
+}
+
+th.dir-d::after {
+    color: inherit;
+    content: ' \02B07'
+}
+
+th.dir-u {
+    color: #ffcd00;
+}
+
+th.dir-u::after {
+    color: inherit;
+    content: ' \02B06'
 }
 
 td {

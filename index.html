@@ -8,15 +8,11 @@
     <link rel="stylesheet" type="text/css" href="/css/neat.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
 
-    <!-- <script type="text/javascript" src="/js/alpine.min.js" defer></script>
-    <script type="text/javascript" src="/js/hyperscript.min.js" defer></script> -->
     <script type="text/javascript" src="/js/htmx.min.js"></script>
     <script type="text/javascript" src="/js/client-side-templates.js"></script>
     <script type="text/javascript" src="/js/mustache.js"></script>
-    <!-- <script>
-        // Get Alpine to use a valid html custom attribute prefix
-        document.addEventListener("alpine:init", () => Alpine.prefix("data-x-"));
-    </script> -->
+    <script type="text/javascript" src="/js/sortable.min.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>
 
 </head>
 
@@ -33,14 +29,14 @@
                 hx-swap="innerHTML"
                 hx-target="#country-list"
                 mustache-template="countries">
-                Reload data
+                Reset data
             </button>
 
             <script id="countries" type="mustache">
                 <caption>
                 A list of countries and a random number
                 </caption>
-                <thead><tr><th scope="col">Country</th><th scope="col">Count</th></tr></thead>
+                <thead><tr><th scope="col" id="country">Country</th><th scope="col" id="count">Count</th></tr></thead>
                 <tbody>
                 {{#countries}}
                   <tr>
@@ -51,11 +47,9 @@
                 <tfoot><tr><th scope="col">Country</th><th scope="col">Count</th></tr></tfoot>
               </script>
 
-              <table id="country-list"></table>
+              <table id="country-list" class="sortable asc"></table>
           </div>
     </main>
-
-
 
     <footer>
 
