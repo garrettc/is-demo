@@ -23,7 +23,7 @@ $ source ./env/bin/activate
 Install requirements:
 
 ```
-$ pip install -r requirements/requirements-dev.txt
+(env) $ pip install -r requirements/requirements-dev.txt
 ```
 
 (NOTE: `requirements-dev.txt` includes `requirements.txt` automatically)
@@ -35,7 +35,7 @@ This repository uses the [pre-commit](https://pre-commit.com/) framework to perf
 Run pre-commit install to set up the git hook scripts
 
 ```
-$ pre-commit install
+(env) $ pre-commit install
 ```
 
 Now pre-commit will run automatically on git commit.
@@ -45,7 +45,7 @@ Now pre-commit will run automatically on git commit.
 To run the app with a basic HTTP server:
 
 ```
-$ python -m http.server
+(env) $ python -m http.server
 ```
 
 And then visit [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
