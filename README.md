@@ -51,7 +51,7 @@ $ python -m http.server
 ## Todo
 
 - [x] Retrieve data and style
-- [] Table sorting
-- [] Write some tests
-- [] Add Flask or Django app to enable caching of results and more interactive filters
-- [] Bundle javascript to reduce HTTP requests
+- [ ] Table sorting
+- [ ] Write some tests
+- [ ] Add Flask or Django app to enable caching of results and more interactive filters
+- [ ] Bundle javascript to reduce HTTP requests
