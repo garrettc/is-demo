@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>IS Demo</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/neat.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <main>
+        <p>paragraph text.</p>
+    </main>
+
+
+
+    <footer>
+        <script type="text/javascript" src="/js/alpine.min.js" defer></script>
+        <script type="text/javascript" src="/js/hyperscript.min.js" defer></script>
+        <script type="text/javascript" src="/js/htmx.min.js" defer></script>
+        <script>
+            // Get Alpine to use a valid html custom attribute prefix
+            document.addEventListener("alpine:init", () => Alpine.prefix("data-x-"));
+        </script>
+    </footer>
+</body>
+
+</html>

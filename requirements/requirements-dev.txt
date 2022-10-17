@@ -1,0 +1,11 @@
+-r requirements.txt
+pre-commit
+black
+djhtml
+flake8
+isort
+Werkzeug
+pytest
+pytest-django
+coverage
+django-extensions
